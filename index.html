@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Your Slot | 3-Month MMA Fight Camp | Rankrit Dojo Fight Club, Gurugram</title>
+<meta name="description" content="Book your slot for the 3-Month MMA Fight Camp at Rankrit Dojo Fight Club, Sector 7, Gurugram. ₹15,000 for 3 months, including diet chart and weight-cut guidance.">
+<meta property="og:title" content="3-Month MMA Fight Camp | Rankrit Dojo Fight Club">
+<meta property="og:description" content="Limited fighter slots. Book yours in 4 minutes. ₹15,000 for 3 months, Sector 7, Gurugram.">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000;
+  --panel:#170708;
+  --panel-2:#221011;
+  --line:#3d1f20;
+  --line-strong:#5a2a2c;
+  --red:#8b1117;
+  --gold:#d4a62a;
+  --gold-hi:#f0c95a;
+  --bone:#f2ece2;
+  --muted:#b5a79c;
+  --err:#ff7a6b;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Barlow","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--black);color:var(--bone);font-family:var(--body);font-size:17px;line-height:1.5}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+a{color:var(--gold-hi)}
+
+/* Hero: fight-poster slab */
+.hero{position:relative;overflow:hidden;padding:28px 0 34px;border-bottom:4px solid var(--gold)}
+.hero::before{content:"";position:absolute;inset:0;background:var(--red);clip-path:polygon(0 0,100% 0,100% 56%,0 86%)}
+.hero .wrap{position:relative}
+.brand{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.05em;margin:0 0 36px}
+.kicker{font-family:var(--display);font-weight:700;font-size:clamp(28px,7vw,40px);line-height:1;color:var(--gold-hi);margin:0}
+.hero h1{font-family:var(--display);font-weight:900;font-size:clamp(76px,22vw,148px);line-height:.82;text-transform:uppercase;letter-spacing:-.01em;margin:6px 0 20px}
+.lede{max-width:32ch;font-size:18px;margin:0 0 26px}
+.bill{display:flex;flex-wrap:wrap;gap:8px 0;margin:0;padding:0;list-style:none}
+.bill li{font-family:var(--display);font-weight:700;font-size:24px;line-height:1.1;padding:0 14px;border-left:2px solid var(--gold)}
+.bill li:first-child{padding-left:0;border-left:0}
+
+/* Round tracker */
+.tracker{position:sticky;top:0;z-index:5;background:var(--black);border-bottom:1px solid var(--line);padding:12px 0}
+.rounds{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:0;padding:0;list-style:none}
+.rounds li{font-family:var(--display);font-weight:700;font-size:18px;text-align:center;padding:5px 0;border:2px solid var(--line-strong);border-radius:4px;color:var(--muted);transition:background .2s,border-color .2s,color .2s}
+.rounds li.done{background:var(--red);border-color:var(--red);color:var(--bone)}
+.rounds li.now{border-color:var(--gold);color:var(--gold-hi)}
+.round-name{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.round-name b{color:var(--bone);font-weight:600}
+
+/* Form */
+main{padding:28px 0 40px}
+.round h2{font-family:var(--display);font-weight:900;font-size:42px;line-height:1;text-transform:uppercase;margin:0 0 6px}
+.round h2:focus,#success h2:focus{outline:none}
+.hint{color:var(--muted);margin:0 0 22px}
+.round.enter{animation:roundIn .28s ease-out}
+@keyframes roundIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+
+.block{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px;margin:0 0 16px}
+.block h3{font-size:18px;font-weight:700;color:var(--gold-hi);margin:0 0 16px}
+.field{margin:0 0 18px;padding:0;border:0;min-width:0}
+.block > .field:last-child,.block > .row:last-child .field{margin-bottom:0}
+.lbl{display:block;font-weight:600;font-size:16px;margin:0 0 6px;padding:0}
+.opt{font-weight:400;font-size:14px;color:var(--muted)}
+.sub{font-size:14px;color:var(--muted);margin:-2px 0 10px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.row.three{grid-template-columns:repeat(3,1fr)}
+@media (max-width:380px){.row:not(.three){grid-template-columns:1fr}}
+
+input[type=text],input[type=tel],input[type=email],input[type=number],input[type=date],select,textarea{
+  width:100%;min-height:50px;padding:12px 14px;background:var(--panel-2);border:1px solid var(--line-strong);border-radius:6px;
+  color:var(--bone);font:inherit;font-size:17px;-webkit-appearance:none;appearance:none}
+input[type=date]{color-scheme:dark}
+textarea{min-height:92px;resize:vertical}
+select{padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23d4a62a' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+select option{background:#1a0a0b;color:var(--bone)}
+input::placeholder,textarea::placeholder{color:#8a7b72}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+.age{margin:-6px 0 18px;font-weight:600;color:var(--gold-hi)}
+
+/* Chips and tiles */
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choice{position:relative;display:inline-block}
+.choice input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:pointer}
+.choice span{display:inline-flex;align-items:center;min-height:44px;padding:9px 16px;border:1px solid var(--line-strong);border-radius:999px;background:var(--panel-2);font-weight:500;font-size:16px;transition:border-color .15s,background .15s,color .15s}
+.choice input[type=checkbox]:checked + span::before{content:"✓";margin-right:7px;font-weight:700}
+.choice input:checked + span{border-color:var(--gold);background:rgba(212,166,42,.14);color:var(--gold-hi)}
+.choice input:focus-visible + span{outline:2px solid var(--gold);outline-offset:2px}
+.tiles{display:grid;gap:8px}
+.tiles .choice{display:block}
+.tiles .choice span{display:block;width:100%;border-radius:6px;padding:13px 16px;border-left-width:4px}
+.tiles .choice span small{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:2px}
+.tiles .choice input:checked + span small{color:var(--bone)}
+.group-lbl{font-size:14px;color:var(--muted);margin:4px 0 8px}
+.group-lbl + .choices{margin-bottom:10px}
+
+/* Declarations */
+.agree{display:flex;gap:12px;align-items:flex-start;cursor:pointer;font-size:16px}
+.agree input{width:22px;height:22px;margin:2px 0 0;flex:none;accent-color:var(--gold)}
+.block .agree-field{padding-top:14px;border-top:1px solid var(--line);margin-bottom:14px}
+.block .agree-field:first-of-type{padding-top:0;border-top:0}
+.minor-note{font-size:15px;color:var(--gold-hi);margin:0 0 14px}
+.note{border-left:4px solid var(--gold);background:var(--panel);padding:14px 16px;border-radius:0 6px 6px 0;margin:0 0 16px}
+.note strong{color:var(--gold-hi)}
+
+/* Errors */
+.err{color:var(--err);font-size:14px;font-weight:500;margin:6px 0 0}
+.err:empty{display:none}
+.field.invalid input:not([type=checkbox]):not([type=radio]),.field.invalid select,.field.invalid textarea{border-color:var(--err)}
+.field.invalid .choice span{border-color:rgba(255,122,107,.65)}
+.form-alert{background:rgba(255,122,107,.12);border:1px solid var(--err);color:var(--bone);border-radius:6px;padding:14px 16px;margin:0 0 16px}
+.form-alert:focus{outline:2px solid var(--err)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+
+/* Nav */
+.nav{position:sticky;bottom:0;z-index:4;display:flex;gap:10px;margin:8px -20px 0;padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));background:var(--black);border-top:1px solid var(--line)}
+.btn{font:inherit;font-weight:700;font-size:17px;min-height:52px;padding:0 22px;border-radius:6px;border:2px solid transparent;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.btn-primary{flex:1;background:var(--gold);color:#000}
+.btn-primary:hover{background:var(--gold-hi)}
+.btn-ghost{background:transparent;color:var(--bone);border-color:var(--line-strong)}
+.btn-ghost:hover{border-color:var(--muted)}
+.btn:focus-visible{outline:3px solid var(--bone);outline-offset:2px}
+.btn[disabled]{opacity:.65;cursor:progress}
+
+/* Success */
+#success{padding:8px 0 20px}
+#success h2{font-family:var(--display);font-weight:900;font-size:clamp(48px,13vw,72px);line-height:.9;text-transform:uppercase;margin:0 0 16px}
+#success p{font-size:18px;margin:0 0 14px;max-width:40ch}
+.calls{display:grid;gap:10px;margin-top:24px}
+.calls .btn{width:100%}
+
+footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 30px;font-size:15px;color:var(--muted)}
+footer strong{display:block;color:var(--bone);font-family:var(--display);font-size:20px;letter-spacing:.04em;margin-bottom:6px}
+footer p{margin:0 0 8px}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="brand">Rankrit Dojo Fight Club</p>
+    <p class="kicker">3-Month MMA</p>
+    <h1>Fight<br>Camp</h1>
+    <p class="lede">Book your slot in five short rounds. Takes about 4 minutes.</p>
+    <ul class="bill">
+      <li>3 months</li>
+      <li>₹15,000</li>
+      <li>Sector 7, Gurugram</li>
+    </ul>
+  </div>
+</header>
+
+<div id="formTop"></div>
+<div class="tracker" id="tracker">
+  <div class="wrap">
+    <ol class="rounds" aria-hidden="true">
+      <li class="now">R1</li><li>R2</li><li>R3</li><li>R4</li><li>R5</li>
+    </ol>
+    <p class="round-name" aria-live="polite">Round <b id="rNum">1</b> of 5: <b id="rName">About you</b></p>
+  </div>
+</div>
+
+<main>
+<div class="wrap">
+
+<form id="campForm" novalidate>
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <!-- ROUND 1 -->
+  <section class="round" data-name="About you" aria-labelledby="r1h">
+    <h2 id="r1h" tabindex="-1">About you</h2>
+    <p class="hint">So your coaches know who's stepping in.</p>
+
+    <div class="block">
+      <h3>Personal details</h3>
+      <div class="field" data-msg="Enter your full name.">
+        <label class="lbl" for="fullName">Full name</label>
+        <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+        <p class="err"></p>
+      </div>
+      <div class="row">
+        <div class="field" data-msg="Enter your date of birth." data-bad="Enter a valid date of birth.">
+          <label class="lbl" for="dob">Date of birth</label>
+          <input type="date" id="dob" name="dob" required>
+          <p class="err"></p>
+        </div>
+        <div class="field" data-msg="Select your gender.">
+          <label class="lbl" for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Prefer not to say</option>
+          </select>
+          <p class="err"></p>
+        </div>
+      </div>
+      <p class="age" id="ageOut" hidden></p>
+      <div class="field">
+        <label class="lbl" for="occupation">Occupation <span class="opt">(optional)</span></label>
+        <input type="text" id="occupation" name="occupation" placeholder="e.g. Student, working professional">
+        <p class="err"></p>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Contact</h3>
+      <div class="field" data-msg="Enter your mobile number." data-bad="Enter a valid 10-digit mobile number.">
+        <label class="lbl" for="phone">Mobile number (WhatsApp)</label>
+        <input type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="tel-national" pattern="[6-9][0-9]{9}" placeholder="10-digit number" required>
+        <p class="err"></p>
+      </div>
+      <div class="field" data-bad="Enter a valid 10-digit mobile number.">
+        <label class="lbl" for="altPhone">Alternate number <span class="opt">(optional)</span></label>
+        <input type="tel" id="altPhone" name="altPhone" inputmode="numeric" pattern="[6-9][0-9]{9}" placeholder="10-digit number">
+        <p class="err"></p>
+      </div>
+      <div class="field" data-bad="Enter a valid email address, like name@gmail.com.">
+        <label class="lbl" for="email">Email <span class="opt">(optional)</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" placeholder="name@gmail.com">
+        <p class="err"></p>
+      </div>
+      <div class="field" data-msg="Enter your area or locality.">
+        <label class="lbl" for="area">Area / locality</label>
+        <input type="text" id="area" name="area" autocomplete="address-level3" placeholder="e.g. Sector 14, Gurugram" required>
+        <p class="err"></p>
+      </div>
+    </div>
+
+    <div class="block" id="guardianBlock" hidden>
+      <h3>Parent or guardian</h3>
+      <p class="sub">Needed for trainees under 18.</p>
+      <div class="field" data-msg="Enter the parent or guardian's name.">
+        <label class="lbl" for="gName">Parent / guardian name</label>
+        <input type="text" id="gName" name="gName">
+        <p class="err"></p>
+      </div>
+      <div class="field" data-msg="Enter the parent or guardian's mobile number." data-bad="Enter a valid 10-digit mobile number.">
+        <label class="lbl" for="gPhone">Parent / guardian mobile</label>
+        <input type="tel" id="gPhone" name="gPhone" inputmode="numeric" pattern="[6-9][0-9]{9}" placeholder="10-digit number">
+        <p class="err"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROUND 2 -->
+  <section class="round" data-name="Fight background" aria-labelledby="r2h" hidden>
+    <h2 id="r2h" tabindex="-1">Fight background</h2>
+    <p class="hint">Beginners welcome. This helps us place you at the right level.</p>
+
+    <div class="block">
+      <h3>Body stats</h3>
+      <div class="row">
+        <div class="field" data-msg="Enter your height.">
+          <label class="lbl" for="height">Height</label>
+          <input type="text" id="height" name="height" placeholder="5'9&quot; or 175 cm" required>
+          <p class="err"></p>
+        </div>
+        <div class="field" data-msg="Enter your weight in kg." data-bad="Enter your weight in kg, e.g. 72.">
+          <label class="lbl" for="weight">Weight (kg)</label>
+          <input type="number" id="weight" name="weight" inputmode="decimal" min="20" max="200" step="0.1" placeholder="e.g. 72" required>
+          <p class="err"></p>
+        </div>
+      </div>
+      <div class="field" data-bad="Enter a weight in kg, e.g. 66.">
+        <label class="lbl" for="targetWeight">Target fight weight (kg) <span class="opt">(optional)</span></label>
+        <input type="number" id="targetWeight" name="targetWeight" inputmode="decimal" min="20" max="200" step="0.1" placeholder="Leave blank if unsure">
+        <p class="err"></p>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Experience</h3>
+      <fieldset class="field" data-group data-required data-msg="Select your experience level.">
+        <legend class="lbl">Martial arts experience</legend>
+        <div class="tiles">
+          <label class="choice"><input type="radio" name="experience" value="Complete beginner"><span>Complete beginner</span></label>
+          <label class="choice"><input type="radio" name="experience" value="Less than 1 year"><span>Less than 1 year</span></label>
+          <label class="choice"><input type="radio" name="experience" value="1 to 3 years"><span>1 to 3 years</span></label>
+          <label class="choice"><input type="radio" name="experience" value="3+ years"><span>3+ years</span></label>
+        </div>
+        <p class="err"></p>
+      </fieldset>
+
+      <fieldset class="field" data-group>
+        <legend class="lbl">Styles you've trained <span class="opt">(optional)</span></legend>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" name="styles" value="Boxing"><span>Boxing</span></label>
+          <label class="choice"><input type="checkbox" name="styles" value="Kickboxing"><span>Kickboxing</span></label>
+          <label class="choice"><input type="checkbox" name="styles" value="Muay Thai"><span>Muay Thai</span></label>
+          <label class="choice"><input type="checkbox" name="styles" value="Wrestling"><span>Wrestling</span></label>
+          <label class="choice"><input type="checkbox" name="styles" value="BJJ"><span>BJJ</span></label>
+          <label class="choice"><input type="checkbox" name="styles" value="Judo"><span>Judo</span></label>
+          <label class="choice"><input type="checkbox" name="styles" value="Karate / Taekwondo"><span>Karate / Taekwondo</span></label>
+          <label class="choice"><input type="checkbox" name="styles" value="MMA"><span>MMA</span></label>
+        </div>
+        <p class="err"></p>
+      </fieldset>
+
+      <fieldset class="field" data-group data-required data-msg="Tell us about your sparring experience.">
+        <legend class="lbl">Have you sparred before?</legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="sparring" value="Yes, regularly"><span>Yes, regularly</span></label>
+          <label class="choice"><input type="radio" name="sparring" value="A few times"><span>A few times</span></label>
+          <label class="choice"><input type="radio" name="sparring" value="Never"><span>Never</span></label>
+        </div>
+        <p class="err"></p>
+      </fieldset>
+
+      <fieldset class="field" data-group>
+        <legend class="lbl">Fighting stance <span class="opt">(optional)</span></legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="stance" value="Orthodox"><span>Orthodox</span></label>
+          <label class="choice"><input type="radio" name="stance" value="Southpaw"><span>Southpaw</span></label>
+          <label class="choice"><input type="radio" name="stance" value="Switch"><span>Switch</span></label>
+          <label class="choice"><input type="radio" name="stance" value="Not sure"><span>Not sure</span></label>
+        </div>
+        <p class="err"></p>
+      </fieldset>
+
+      <fieldset class="field" data-group>
+        <legend class="lbl">Amateur fight record <span class="opt">(optional)</span></legend>
+        <div class="row three">
+          <input type="number" name="wins" min="0" max="99" inputmode="numeric" placeholder="Wins" aria-label="Wins">
+          <input type="number" name="losses" min="0" max="99" inputmode="numeric" placeholder="Losses" aria-label="Losses">
+          <input type="number" name="draws" min="0" max="99" inputmode="numeric" placeholder="Draws" aria-label="Draws">
+        </div>
+        <p class="err"></p>
+      </fieldset>
+
+      <div class="field">
+        <label class="lbl" for="prevGym">Previous academy or coach <span class="opt">(optional)</span></label>
+        <input type="text" id="prevGym" name="prevGym">
+        <p class="err"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROUND 3 -->
+  <section class="round" data-name="Goals and schedule" aria-labelledby="r3h" hidden>
+    <h2 id="r3h" tabindex="-1">Goals and schedule</h2>
+    <p class="hint">Your coach builds your camp around this.</p>
+
+    <div class="block">
+      <h3>Your goal</h3>
+      <fieldset class="field" data-group data-required data-msg="Select your main goal.">
+        <legend class="lbl">Main goal for this camp</legend>
+        <div class="tiles">
+          <label class="choice"><input type="radio" name="goal" value="Compete in amateur MMA"><span>Compete in amateur MMA</span></label>
+          <label class="choice"><input type="radio" name="goal" value="Build towards a pro career"><span>Build towards a pro career</span></label>
+          <label class="choice"><input type="radio" name="goal" value="Prepare for a specific fight"><span>Prepare for a specific fight</span></label>
+          <label class="choice"><input type="radio" name="goal" value="Train at fighter level, no fight planned yet"><span>Train at fighter level<small>No fight planned yet</small></span></label>
+        </div>
+        <p class="err"></p>
+      </fieldset>
+      <div class="field">
+        <label class="lbl" for="targetEvent">Target event or fight date <span class="opt">(optional)</span></label>
+        <input type="text" id="targetEvent" name="targetEvent" placeholder="e.g. State MMA championship, March">
+        <p class="err"></p>
+      </div>
+      <fieldset class="field" data-group>
+        <legend class="lbl">What do you most want to improve? <span class="opt">(optional)</span></legend>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" name="focus" value="Striking"><span>Striking</span></label>
+          <label class="choice"><input type="checkbox" name="focus" value="Wrestling & takedowns"><span>Wrestling &amp; takedowns</span></label>
+          <label class="choice"><input type="checkbox" name="focus" value="Ground game & submissions"><span>Ground game</span></label>
+          <label class="choice"><input type="checkbox" name="focus" value="Defence"><span>Defence</span></label>
+          <label class="choice"><input type="checkbox" name="focus" value="Cardio & endurance"><span>Cardio &amp; endurance</span></label>
+          <label class="choice"><input type="checkbox" name="focus" value="Power & strength"><span>Power &amp; strength</span></label>
+          <label class="choice"><input type="checkbox" name="focus" value="Fight IQ & strategy"><span>Fight IQ &amp; strategy</span></label>
+          <label class="choice"><input type="checkbox" name="focus" value="Weight cut"><span>Weight cut</span></label>
+        </div>
+        <p class="err"></p>
+      </fieldset>
+    </div>
+
+    <div class="block">
+      <h3>Schedule</h3>
+      <fieldset class="field" data-group data-required data-msg="Pick a batch timing.">
+        <legend class="lbl">Preferred batch</legend>
+        <p class="group-lbl">Morning</p>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="batch" value="Morning 6–7 am"><span>6–7 am</span></label>
+          <label class="choice"><input type="radio" name="batch" value="Morning 7–8 am"><span>7–8 am</span></label>
+          <label class="choice"><input type="radio" name="batch" value="Morning 8–9 am"><span>8–9 am</span></label>
+        </div>
+        <p class="group-lbl">Evening</p>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="batch" value="Evening 6–7 pm"><span>6–7 pm</span></label>
+          <label class="choice"><input type="radio" name="batch" value="Evening 7–8 pm"><span>7–8 pm</span></label>
+          <label class="choice"><input type="radio" name="batch" value="Evening 8–9 pm"><span>8–9 pm</span></label>
+        </div>
+        <p class="err"></p>
+      </fieldset>
+      <div class="field" data-msg="Pick a start date." data-bad="Pick today or a later date.">
+        <label class="lbl" for="startDate">Preferred start date</label>
+        <input type="date" id="startDate" name="startDate" required>
+        <p class="err"></p>
+      </div>
+      <fieldset class="field" data-group data-required data-msg="Choose how you'd like to start.">
+        <legend class="lbl">How would you like to start?</legend>
+        <div class="tiles">
+          <label class="choice"><input type="radio" name="startOption" value="Enrol directly in Fight Camp"><span>Enrol directly<small>Full 3-month camp, ₹15,000</small></span></label>
+          <label class="choice"><input type="radio" name="startOption" value="Trial session first (₹500)"><span>Trial session first<small>₹500, adjusted in your fee if you enrol</small></span></label>
+        </div>
+        <p class="err"></p>
+      </fieldset>
+    </div>
+
+    <div class="block">
+      <h3>Gear</h3>
+      <fieldset class="field" data-group data-exclusive="None yet">
+        <legend class="lbl">Gear you already own <span class="opt">(optional)</span></legend>
+        <p class="sub">Missing something? Your coach will tell you what to get.</p>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" name="gear" value="Boxing gloves"><span>Boxing gloves</span></label>
+          <label class="choice"><input type="checkbox" name="gear" value="MMA gloves"><span>MMA gloves</span></label>
+          <label class="choice"><input type="checkbox" name="gear" value="Hand wraps"><span>Hand wraps</span></label>
+          <label class="choice"><input type="checkbox" name="gear" value="Mouthguard"><span>Mouthguard</span></label>
+          <label class="choice"><input type="checkbox" name="gear" value="Shin guards"><span>Shin guards</span></label>
+          <label class="choice"><input type="checkbox" name="gear" value="Headgear"><span>Headgear</span></label>
+          <label class="choice"><input type="checkbox" name="gear" value="Rash guard"><span>Rash guard</span></label>
+          <label class="choice"><input type="checkbox" name="gear" value="None yet"><span>None yet</span></label>
+        </div>
+        <p class="err"></p>
+      </fieldset>
+    </div>
+  </section>
+
+  <!-- ROUND 4 -->
+  <section class="round" data-name="Health and diet" aria-labelledby="r4h" hidden>
+    <h2 id="r4h" tabindex="-1">Health and diet</h2>
+    <p class="hint">Keeps your training safe and shapes your diet chart. Only your coaches see this.</p>
+
+    <div class="block">
+      <h3>Medical</h3>
+      <fieldset class="field" data-group data-required data-exclusive="None" data-msg="Select any that apply, or None.">
+        <legend class="lbl">Do you have any of these?</legend>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" name="conditions" value="None"><span>None</span></label>
+          <label class="choice"><input type="checkbox" name="conditions" value="Asthma"><span>Asthma</span></label>
+          <label class="choice"><input type="checkbox" name="conditions" value="Heart condition"><span>Heart condition</span></label>
+          <label class="choice"><input type="checkbox" name="conditions" value="Blood pressure issues"><span>Blood pressure issues</span></label>
+          <label class="choice"><input type="checkbox" name="conditions" value="Diabetes"><span>Diabetes</span></label>
+          <label class="choice"><input type="checkbox" name="conditions" value="Epilepsy / seizures"><span>Epilepsy / seizures</span></label>
+          <label class="choice"><input type="checkbox" name="conditions" value="Past concussion"><span>Past concussion</span></label>
+          <label class="choice"><input type="checkbox" name="conditions" value="Back or joint problems"><span>Back or joint problems</span></label>
+          <label class="choice"><input type="checkbox" name="conditions" value="Other (see details)"><span>Other</span></label>
+        </div>
+        <p class="err"></p>
+      </fieldset>
+      <div class="field">
+        <label class="lbl" for="injuries">Injuries, surgeries or other details <span class="opt">(optional)</span></label>
+        <textarea id="injuries" name="injuries" placeholder="e.g. ACL surgery 2023, shoulder dislocation last year"></textarea>
+        <p class="err"></p>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label class="lbl" for="meds">Current medication <span class="opt">(optional)</span></label>
+          <input type="text" id="meds" name="meds">
+          <p class="err"></p>
+        </div>
+        <div class="field">
+          <label class="lbl" for="blood">Blood group <span class="opt">(optional)</span></label>
+          <select id="blood" name="blood">
+            <option value="">Select</option>
+            <option>A+</option><option>A−</option><option>B+</option><option>B−</option>
+            <option>AB+</option><option>AB−</option><option>O+</option><option>O−</option>
+            <option>Don't know</option>
+          </select>
+          <p class="err"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Diet</h3>
+      <fieldset class="field" data-group data-required data-msg="Select your diet type.">
+        <legend class="lbl">Diet type</legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="diet" value="Vegetarian"><span>Vegetarian</span></label>
+          <label class="choice"><input type="radio" name="diet" value="Eggetarian"><span>Eggetarian</span></label>
+          <label class="choice"><input type="radio" name="diet" value="Non-vegetarian"><span>Non-vegetarian</span></label>
+          <label class="choice"><input type="radio" name="diet" value="Vegan"><span>Vegan</span></label>
+          <label class="choice"><input type="radio" name="diet" value="Jain"><span>Jain</span></label>
+        </div>
+        <p class="err"></p>
+      </fieldset>
+      <div class="field">
+        <label class="lbl" for="allergies">Food allergies or foods you avoid <span class="opt">(optional)</span></label>
+        <input type="text" id="allergies" name="allergies" placeholder="e.g. lactose, peanuts">
+        <p class="err"></p>
+      </div>
+      <div class="field">
+        <label class="lbl" for="supplements">Supplements you take <span class="opt">(optional)</span></label>
+        <input type="text" id="supplements" name="supplements" placeholder="e.g. whey protein, creatine">
+        <p class="err"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROUND 5 -->
+  <section class="round" data-name="Safety and consent" aria-labelledby="r5h" hidden>
+    <h2 id="r5h" tabindex="-1">Safety and consent</h2>
+    <p class="hint">Last round. Then your slot request goes to our team.</p>
+
+    <div class="block">
+      <h3>Emergency contact</h3>
+      <div class="field" data-msg="Enter an emergency contact name.">
+        <label class="lbl" for="emName">Name</label>
+        <input type="text" id="emName" name="emName" required>
+        <p class="err"></p>
+      </div>
+      <div class="row">
+        <div class="field" data-msg="Enter their relation to you.">
+          <label class="lbl" for="emRelation">Relation</label>
+          <input type="text" id="emRelation" name="emRelation" placeholder="e.g. Father, spouse" required>
+          <p class="err"></p>
+        </div>
+        <div class="field" data-msg="Enter their mobile number." data-bad="Enter a valid 10-digit mobile number.">
+          <label class="lbl" for="emPhone">Mobile</label>
+          <input type="tel" id="emPhone" name="emPhone" inputmode="numeric" pattern="[6-9][0-9]{9}" placeholder="10-digit number" required>
+          <p class="err"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>How did you find us?</h3>
+      <div class="field">
+        <label class="lbl" for="source">Source <span class="opt">(optional)</span></label>
+        <select id="source" name="source">
+          <option value="">Select</option>
+          <option>Google search or Maps</option>
+          <option>Instagram</option>
+          <option>Facebook</option>
+          <option>YouTube</option>
+          <option>Friend or family</option>
+          <option>Walked past the dojo</option>
+          <option>Other</option>
+        </select>
+        <p class="err"></p>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Declarations</h3>
+      <p class="minor-note" id="minorNote" hidden>You're under 18, so a parent or guardian should read and tick these.</p>
+      <div class="field agree-field" data-msg="Tick this to continue.">
+        <label class="agree"><input type="checkbox" name="decFit" required><span>The information I've given is correct. I'm medically fit to train and will tell my coach about any change in my health.</span></label>
+        <p class="err"></p>
+      </div>
+      <div class="field agree-field" data-msg="Tick this to continue.">
+        <label class="agree"><input type="checkbox" name="decRisk" required><span>I understand MMA is a full-contact sport with a risk of injury, and I'll follow my coaches' safety instructions.</span></label>
+        <p class="err"></p>
+      </div>
+      <div class="field agree-field" data-msg="Tick this to continue.">
+        <label class="agree"><input type="checkbox" name="decFee" required><span>I agree to the Fight Camp fee of ₹15,000 for 3 months and to Rankrit Dojo's membership terms and conditions.</span></label>
+        <p class="err"></p>
+      </div>
+      <div class="field agree-field">
+        <label class="agree"><input type="checkbox" name="decMedia"><span>Rankrit Dojo can share photos and videos of my training on its social media. <span class="opt">(optional)</span></span></label>
+        <p class="err"></p>
+      </div>
+    </div>
+
+    <p class="note"><strong>No payment now.</strong> After you book, our team will call you to confirm your batch and fee.</p>
+    <p class="form-alert" id="formAlert" role="alert" tabindex="-1" hidden></p>
+  </section>
+
+  <div class="nav">
+    <button type="button" class="btn btn-ghost" id="backBtn" hidden>Back</button>
+    <button type="submit" class="btn btn-primary" id="nextBtn">Next round</button>
+  </div>
+</form>
+
+<section id="success" aria-labelledby="okh" hidden>
+  <h2 id="okh" tabindex="-1">Slot booking received</h2>
+  <p>Thanks, <span id="sName">fighter</span>. Our team will call you on <strong id="sPhone">your number</strong> to confirm your batch and fee.</p>
+  <p>Want to talk now? Call the dojo.</p>
+  <div class="calls">
+    <a class="btn btn-primary" href="tel:+919810429363">Call 98104 29363</a>
+  </div>
+</section>
+
+<footer>
+  <strong>Rankrit Dojo Fight Club</strong>
+  <p>Basement, 23-A, Opposite EGGOZ, Near Gurudwara, New Colony, Sector 7, Gurugram, Haryana 122001</p>
+  <p><a href="tel:+919810429363">98104 29363</a></p>
+</footer>
+
+</div>
+</main>
+
+<script>
+(function(){
+  // Web3Forms key: submissions are emailed to the address linked to this key
+  var ACCESS_KEY = "91aec322-7312-4e81-a615-7e6333b7cf22";
+
+  var form = document.getElementById('campForm');
+  var rounds = Array.prototype.slice.call(form.querySelectorAll('.round'));
+  var marks = Array.prototype.slice.call(document.querySelectorAll('.rounds li'));
+  var rNum = document.getElementById('rNum');
+  var rName = document.getElementById('rName');
+  var backBtn = document.getElementById('backBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var alertBox = document.getElementById('formAlert');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current = 0;
+  var sending = false;
+
+  // Link each field's error message for screen readers
+  form.querySelectorAll('.field').forEach(function(f, i){
+    var err = f.querySelector('.err');
+    if(!err) return;
+    err.id = 'err-' + i;
+    f.querySelectorAll('input,select,textarea').forEach(function(c){
+      c.setAttribute('aria-describedby', err.id);
+    });
+  });
+
+  // Date limits
+  var today = new Date();
+  function iso(d){
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  }
+  var dob = document.getElementById('dob');
+  dob.max = iso(today);
+  dob.min = '1950-01-01';
+  document.getElementById('startDate').min = iso(today);
+
+  // Age and guardian section
+  var ageOut = document.getElementById('ageOut');
+  var guardian = document.getElementById('guardianBlock');
+  var minorNote = document.getElementById('minorNote');
+  function ageFrom(v){
+    if(!v) return null;
+    var b = new Date(v + 'T00:00:00');
+    if(isNaN(b.getTime())) return null;
+    var a = today.getFullYear() - b.getFullYear();
+    var m = today.getMonth() - b.getMonth();
+    if(m < 0 || (m === 0 && today.getDate() < b.getDate())) a--;
+    return a;
+  }
+  function isMinor(){
+    var a = ageFrom(dob.value);
+    return a !== null && a >= 0 && a < 18;
+  }
+  function updateAge(){
+    var a = ageFrom(dob.value);
+    var minor = isMinor();
+    if(a !== null && a >= 0 && a < 100){
+      ageOut.textContent = 'Age ' + a + (minor ? '. Add a parent or guardian below.' : '');
+      ageOut.hidden = false;
+    } else {
+      ageOut.hidden = true;
+    }
+    guardian.hidden = !minor;
+    minorNote.hidden = !minor;
+    guardian.querySelectorAll('input').forEach(function(i){ i.required = minor; });
+  }
+  dob.addEventListener('change', updateAge);
+  dob.addEventListener('input', updateAge);
+
+  // Clean phone numbers: accept "+91 98104 29363", "098104..." etc.
+  form.querySelectorAll('input[type=tel]').forEach(function(t){
+    t.addEventListener('change', function(){
+      var d = t.value.replace(/\D/g, '');
+      if(d.length === 12 && d.indexOf('91') === 0) d = d.slice(2);
+      if(d.length === 11 && d.charAt(0) === '0') d = d.slice(1);
+      t.value = d;
+    });
+  });
+
+  // "None" unticks the rest, and vice versa
+  form.querySelectorAll('[data-exclusive]').forEach(function(group){
+    var noneVal = group.getAttribute('data-exclusive');
+    group.addEventListener('change', function(e){
+      var t = e.target;
+      if(t.type !== 'checkbox' || !t.checked) return;
+      group.querySelectorAll('input[type=checkbox]').forEach(function(b){
+        if(b === t) return;
+        if(t.value === noneVal || b.value === noneVal) b.checked = false;
+      });
+    });
+  });
+
+  // Validation
+  function fieldError(field, commit){
+    if(field.closest('[hidden]')) return '';
+    var msg = field.getAttribute('data-msg') || 'Fill in this field.';
+    var bad = field.getAttribute('data-bad') || msg;
+    if(field.hasAttribute('data-group')){
+      if(field.hasAttribute('data-required')) return field.querySelector('input:checked') ? '' : msg;
+      var invalidNum = Array.prototype.some.call(field.querySelectorAll('input[type=number]'), function(n){ return !n.checkValidity(); });
+      return invalidNum ? 'Use whole numbers from 0 to 99.' : '';
+    }
+    var c = field.querySelector('input,select,textarea');
+    if(!c) return '';
+    if(c.type === 'checkbox') return (c.required && !c.checked) ? msg : '';
+    if(commit && (c.type === 'text' || c.type === 'email' || c.tagName === 'TEXTAREA')) c.value = c.value.trim();
+    if(c.validity.valueMissing) return msg;
+    if(!c.checkValidity()) return bad;
+    return '';
+  }
+  function setErr(field, msg){
+    field.classList.toggle('invalid', !!msg);
+    var e = field.querySelector('.err');
+    if(e) e.textContent = msg || '';
+    field.querySelectorAll('input,select,textarea').forEach(function(c){
+      if(msg) c.setAttribute('aria-invalid', 'true'); else c.removeAttribute('aria-invalid');
+    });
+  }
+  function validateRound(i){
+    var first = null;
+    rounds[i].querySelectorAll('.field').forEach(function(f){
+      var m = fieldError(f, true);
+      setErr(f, m);
+      if(m && !first) first = f;
+    });
+    if(first){
+      first.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+      var target = first.querySelector('input:not(.hp),select,textarea');
+      if(target) setTimeout(function(){ target.focus({ preventScroll: true }); }, reduceMotion ? 0 : 300);
+      return false;
+    }
+    return true;
+  }
+  function recheck(e){
+    var f = e.target.closest('.field');
+    if(f && f.classList.contains('invalid')) setErr(f, fieldError(f, false));
+  }
+  form.addEventListener('input', recheck);
+  form.addEventListener('change', recheck);
+
+  // Round navigation
+  function scrollToForm(){
+    var y = document.getElementById('formTop').getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
+  }
+  function showRound(i, move){
+    rounds.forEach(function(r, idx){ r.hidden = idx !== i; });
+    var r = rounds[i];
+    if(!reduceMotion){ r.classList.remove('enter'); void r.offsetWidth; r.classList.add('enter'); }
+    marks.forEach(function(m, idx){
+      m.classList.toggle('done', idx < i);
+      m.classList.toggle('now', idx === i);
+    });
+    rNum.textContent = i + 1;
+    rName.textContent = r.getAttribute('data-name');
+    backBtn.hidden = i === 0;
+    nextBtn.textContent = i === rounds.length - 1 ? 'Book my slot' : 'Next round';
+    if(move){
+      scrollToForm();
+      r.querySelector('h2').focus({ preventScroll: true });
+    }
+  }
+  backBtn.addEventListener('click', function(){
+    if(current > 0 && !sending){ current--; showRound(current, true); }
+  });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(sending) return;
+    if(!validateRound(current)) return;
+    if(current < rounds.length - 1){ current++; showRound(current, true); }
+    else submitBooking();
+  });
+
+  // Helpers to read values
+  function v(name){
+    var el = form.elements[name];
+    if(!el) return '';
+    return String(el.value || '').trim();
+  }
+  function many(name){
+    return Array.prototype.map.call(form.querySelectorAll('input[name="' + name + '"]:checked'), function(x){ return x.value; }).join(', ');
+  }
+  function or(s){ return s || 'Not given'; }
+  function dmy(s){ return s ? s.split('-').reverse().join('-') : ''; }
+  function yes(name){ return form.elements[name].checked ? 'Yes' : 'No'; }
+
+  function buildPayload(){
+    var minor = isMinor();
+    var w = v('wins'), l = v('losses'), d = v('draws');
+    var data = {
+      access_key: ACCESS_KEY,
+      subject: 'New Fight Camp booking: ' + v('fullName'),
+      from_name: 'Rankrit Dojo Fight Camp Form',
+      'Program': '3-Month MMA Fight Camp (₹15,000)',
+      'Start option': v('startOption'),
+      'Full name': v('fullName'),
+      'Mobile (WhatsApp)': v('phone'),
+      'Alternate number': or(v('altPhone'))
+    };
+    if(v('email')) data.email = v('email');
+    data['Date of birth'] = dmy(v('dob'));
+    data['Age'] = String(ageFrom(v('dob')));
+    data['Gender'] = v('gender');
+    data['Area'] = v('area');
+    data['Occupation'] = or(v('occupation'));
+    if(minor){
+      data['Guardian name'] = v('gName');
+      data['Guardian mobile'] = v('gPhone');
+    }
+    data['Height'] = v('height');
+    data['Weight (kg)'] = v('weight');
+    data['Target fight weight (kg)'] = or(v('targetWeight'));
+    data['Experience'] = v('experience');
+    data['Styles trained'] = or(many('styles'));
+    data['Sparring experience'] = v('sparring');
+    data['Stance'] = or(v('stance'));
+    data['Amateur record (W-L-D)'] = (w || l || d) ? [w || '0', l || '0', d || '0'].join('-') : 'None';
+    data['Previous academy / coach'] = or(v('prevGym'));
+    data['Main goal'] = v('goal');
+    data['Target event / date'] = or(v('targetEvent'));
+    data['Wants to improve'] = or(many('focus'));
+    data['Preferred batch'] = v('batch');
+    data['Preferred start date'] = dmy(v('startDate'));
+    data['Gear owned'] = or(many('gear'));
+    data['Medical conditions'] = many('conditions');
+    data['Injuries / surgeries / details'] = or(v('injuries'));
+    data['Current medication'] = or(v('meds'));
+    data['Blood group'] = or(v('blood'));
+    data['Diet type'] = v('diet');
+    data['Allergies / foods avoided'] = or(v('allergies'));
+    data['Supplements'] = or(v('supplements'));
+    data['Emergency contact'] = v('emName') + ' (' + v('emRelation') + ')';
+    data['Emergency mobile'] = v('emPhone');
+    data['Found us via'] = or(v('source'));
+    data['Declarations (fitness, risk, fee & T&C)'] = 'Accepted' + (minor ? ' by parent/guardian' : '');
+    data['Photo/video consent'] = yes('decMedia');
+    return data;
+  }
+
+  function setSending(on){
+    sending = on;
+    nextBtn.disabled = on;
+    backBtn.disabled = on;
+    nextBtn.textContent = on ? 'Booking your slot…' : 'Book my slot';
+  }
+
+  function submitBooking(){
+    alertBox.hidden = true;
+    if(form.elements.botcheck.checked){ showSuccess(); return; }
+    setSending(true);
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(buildPayload())
+    })
+    .then(function(res){
+      return res.json().catch(function(){ return {}; }).then(function(json){
+        if(res.ok && json.success) showSuccess();
+        else throw new Error(json.message || 'Request failed');
+      });
+    })
+    .catch(function(){
+      setSending(false);
+      alertBox.textContent = "Your booking didn't go through. Check your internet connection and tap Book my slot again, or call us on 98104 29363.";
+      alertBox.hidden = false;
+      alertBox.focus();
+    });
+  }
+
+  function showSuccess(){
+    var first = v('fullName').split(/\s+/)[0];
+    var p = v('phone');
+    document.getElementById('sName').textContent = first || 'fighter';
+    document.getElementById('sPhone').textContent = p.length === 10 ? p.slice(0, 5) + ' ' + p.slice(5) : 'your number';
+    form.hidden = true;
+    document.getElementById('tracker').hidden = true;
+    var s = document.getElementById('success');
+    s.hidden = false;
+    scrollToForm();
+    s.querySelector('h2').focus({ preventScroll: true });
+  }
+
+  showRound(0, false);
+})();
+</script>
+</body>
+</html>
